@@ -122,27 +122,16 @@ let users = [
     },
 ];
 
-let user1 = users[0];
-let user2 = users[1];
-let user3 = users[2];
-let user4 = users[3];
-let user5 = users[4];
-let user6 = users[5];
-let user7 = users[6];
-let user8 = users[7];
-let user9 = users[8];
-let user10 = users[9];
-
-console.log(user1.password);
-console.log(user2.password);
-console.log(user3.password);
-console.log(user4.password);
-console.log(user5.password);
-console.log(user6.password);
-console.log(user7.password);
-console.log(user8.password);
-console.log(user9.password);
-console.log(user10.password);
+console.log(users[0].password);
+console.log(users[1].password);
+console.log(users[2].password);
+console.log(users[3].password);
+console.log(users[4].password);
+console.log(users[5].password);
+console.log(users[6].password);
+console.log(users[7].password);
+console.log(users[8].password);
+console.log(users[9].password);
 
 // Логічні розгалуження:
 // - Є змінна х, якій ви надаєте довільне числове значення.
@@ -160,18 +149,13 @@ if (x != 0) {
 // (в першу, другу, третю или четверту частину години).
 
 let time = 0;
-let isFirstQuarter = time >= 0 && time <= 15;
-let isSecondQuarter = time > 15 && time < 30;
-let isThirdQuarter = time >= 30 && time < 45;
-let isFourthQuarter = time >= 45 && time <= 59;
-
-if (isFirstQuarter) {
+if (time >= 0 && time <= 15) {
     console.log('First Quarter');
-} else if (isSecondQuarter) {
+} else if (time > 15 && time < 30) {
     console.log('Second Quarter');
-} else if (isThirdQuarter) {
+} else if (time >= 30 && time < 45) {
     console.log('Third Quarter');
-} else if (isFourthQuarter) {
+} else if (time >= 45 && time <= 59) {
     console.log('Fourth Quarter');
 } else {
     console.log('Please set number from 0 to 59');
