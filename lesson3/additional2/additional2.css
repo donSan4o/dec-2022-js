@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.users-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+}
+.user-block {
+    width: calc(50% - 20px);
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 0 0 40px;
+}

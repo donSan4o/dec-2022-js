@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+.post-card {
+    width: calc(20% - 20px);
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
