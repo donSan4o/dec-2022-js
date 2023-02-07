@@ -1,27 +1,27 @@
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 0; i < 10; i++) {
     document.write(`<div>This is a random text</div>`);
 }
 
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 0; i < 10; i++) {
     document.write(`<div>This is a text for index ${i}</div>`);
 }
 
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 
-let i = 1;
-while (i <= 20) {
+let i = 0;
+while (i < 20) {
     document.write('<h1>Header text</h1>');
     i++;
 }
 
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 
-let x = 1;
-while (x <= 20) {
+let x = 0;
+while (x < 20) {
     document.write(`<h1>Header text and index ${x}</h1>`);
     x++;
 }
@@ -87,7 +87,7 @@ for (const product of products) {
     document.write(`
         <div class="product-card">
             <img src="${product.image}" alt="${product.title}" class="product-image">    
-            <h3 class="product-title">${product.title}.</h3> 
+            <h3 class="product-title">${product.title}</h3> 
             <p class="product-subtitle">Price - <b>${product.price}</b></p>
         </div>
     `);
