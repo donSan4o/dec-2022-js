@@ -43,14 +43,13 @@ while (x < 20) {
 // Масив:
 
 let listOfItems = ['html','css','javascript','mysql','mongodb','react','angular','node.js'];
-
+document.write('<ul>')
 for (const elem in listOfItems) {
     document.write(`
-        <ul>
-            <li>${listOfItems[elem]}</li>
-        </ul>
+        <li>${listOfItems[elem]}</li>
     `);
 }
+document.write('</ul>')
 
 // -----------------------------------------------
 
