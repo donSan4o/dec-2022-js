@@ -9,8 +9,6 @@
     </head>
     <body>
         <!--template 1.1-->
-        <div class="wrap">
-        </div>
 
         <script>
             /*За допомогою циклу вивести всю інформацію про пости використовуючи шаблон Template 1.1.
@@ -618,16 +616,16 @@
                     body: 'cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut',
                 },
             ];
-            let postsWrapper = document.querySelector('.wrap');
-            for (const post of posts) {
-                let data = `
-                    <div class="post-card">
-                        <h3>${post.id}ID - ${post.title}</h3>
-                        <p>${post.body}</p>
-                    </div>
-                `
-                postsWrapper.innerHTML += data;
-            }
+            document.write('<div class="wrap">');
+                for (const post of posts) {
+                    document.write(`
+                        <div class="post-card">
+                            <h3>${post.id} - ${post.title}</h3>
+                            <p>${post.body}</p>
+                        </div>
+                    `);
+                }
+            document.write('</div>');
         </script>
     </body>
 </html>

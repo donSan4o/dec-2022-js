@@ -201,3 +201,4 @@ for (const i of wordArr) {
     newText2 += i;
 }
 console.log(newText2);
+
