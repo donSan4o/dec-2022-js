@@ -127,12 +127,12 @@ swapArr([1, 43, 25, 17, 93, 13], 2, 4);
 function exchange(sumUAH, currencyValues, exchangeCurrency) {
     for (const i of currencyValues) {
         if (exchangeCurrency === i.currency) {
-            console.log(sumUAH / i.value);
+            return console.log(sumUAH / i.value);
         }
     }
 }
 exchange(
-    12500,
+    10000,
     [
         { currency: 'USD', value: 40 },
         { currency: 'EUR', value: 42 },
