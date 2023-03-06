@@ -23,9 +23,19 @@ document.body.appendChild(clone);
 let arr = ['Main', 'Products', 'About us', 'Contacts'];
 
 let ul = document.createElement('ul');
-arr.forEach((item) => {
-    ul.innerHTML += `<li>${item}</li>`;
-});
+let li1 = document.createElement('li')
+li1.innerHTML = 'Main';
+ul.appendChild(li1);
+let li2 = document.createElement('li')
+li2.innerHTML = 'Products';
+ul.appendChild(li2);
+let li3 = document.createElement('li')
+li3.innerHTML = 'About us';
+ul.appendChild(li3);
+let li4 = document.createElement('li')
+li4.innerHTML = 'Contacts';
+ul.appendChild(li4);
+
 document.body.appendChild(ul);
 
 // - Є масив

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sessions info</title>
+        <style>
+            body {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px 30px;
+            }
+            div {
+                width: 20%;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно
+            // відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль,
+            // а побудувати дом структуру під кожну сессію
+            let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+
+            for (const session of sessions) {
+                let div = document.createElement('div');
+                let date = document.createElement('p');
+                let time = document.createElement('p');
+
+                date.innerText = `Current Date was: ${session.date}`;
+                time.innerText = `Current Time was: ${session.time}`;
+                div.appendChild(date);
+                div.appendChild(time);
+                document.body.appendChild(div);
+            }
+        </script>
+    </body>
+</html>

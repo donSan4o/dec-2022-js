@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        #pagination {
+            display: flex;
+            align-items: center;
+        }
+        #prev,
+        #next {
+            width: 150px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            background: white;
+            font-size: 16px;
+        }
+        #prev:hover,
+        #next:hover {
+            background: black;
+            color: white;
+        }
+        #prev[disabled],
+        #next[disabled] {
+            cursor: default;
+        }
+        #pages p {
+            margin: 0 10px;
+        }
+        .table-creator {
+            margin: 50px 0;
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+        }
+        .table-creator input {
+            margin-bottom: 20px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        .table-creator button {
+            border-radius: 5px;
+            height: 30px;
+            border: 1px solid black;
+            background: white;
+        }
+        .table-creator button:hover {
+            background: black;
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            border: 1px solid black;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter-block" style="font-size: 30px;">0</div>
+    <br>
+    <br>
+    <br>
+
+    <div id="pagination">
+        <button id="prev" onclick="clickPrev()" style="margin-right: 10px;">Prev</button>
+        <div id="pages" style="display: flex;"></div>
+        <button id="next" onclick="clickNext()" style="margin-left: 10px;">Next</button>
+    </div>
+    <form class="table-creator">
+        <input type="number" min="1" max="10" id="rows">
+        <input type="number" min="1" max="10" id="cells">
+        <input type="text" id="content">
+        <button id="createTable"> Create Table</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="main.js"></script>
+</body>
+</html>
