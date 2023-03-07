@@ -39,6 +39,9 @@ button.onclick = (e) => {
         submitBlock.append(li);
     }
     document.body.appendChild(submitBlock);
+    inputName.value = '';
+    inputSurname.value = '';
+    inputAge.value = '';
 };
 
 // є сторінка, на якій є блок, в якому знаходиться цифра.
@@ -109,6 +112,9 @@ function addRow() {
         }
         table.appendChild(row);
     }
+    rowCount.value = '';
+    cellCount.value = '';
+    content.value = '';
 }
 
 createButton.onclick = (e) => {
